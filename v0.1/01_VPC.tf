@@ -1,4 +1,4 @@
 resource "aws_vpc" "aws_vpc" {
-  cidr_block = "10.50.0.0/16"
-  tags =  { Name = "hyeon_terra_vpc" }
+  cidr_block = var.vpc_cidr[terraform.workspace]
+  tags =  { Name = "${var.project_name}-${var.env_code[terraform.workspace]}-vpc" }
 }
