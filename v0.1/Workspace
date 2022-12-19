@@ -1,0 +1,14 @@
+## 테라폼 워크스페이스 관리
+
+## 워크스페이스 목록 조회
+terraform workspace list
+
+## Prod, Dev 워크스페이스 생성
+terraform workspace new prod
+terraform workspace new dev
+terraform workspace new stage
+
+## 워크스페이스 전환
+terraform workspace dev ## dev 워크스페이스로 전환
+terraform workspace prod ## prod 워크스페이스로 전환
+
