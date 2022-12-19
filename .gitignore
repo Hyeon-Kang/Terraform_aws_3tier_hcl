@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Security
+v0.1/00_Provider.tf
+
 # Distribution / packaging
 .Python
 build/
