@@ -137,3 +137,4 @@ v0.1/.terraform/environment
 v0.1/.terraform/providers/registry.terraform.io/hashicorp/aws/4.47.0/darwin_arm64/terraform-provider-aws_v4.47.0_x5
 v0.1/terraform.tfstate.d/dev/terraform.tfstate
 v0.1/terraform.tfstate.d/dev/terraform.tfstate.backup
+v0.1/00_Provider.tf
