@@ -5,7 +5,7 @@
 variable "project_name" {
   description = "Project Name"
   type = string
-  default = "nicole-terraform-test"
+  default = "terraform-test"
 }
 
 ### -.2 공통 환경 코드
@@ -20,10 +20,16 @@ variable "env_code" {
 ### -3. 공통 cidr
 variable "vpc_cidr" {
   description = "Each vpc_cidr by workspace"
-  type = map
   default = {
     dev = "10.99.0.0/16"
     prod  = "10.199.0.0/16"
   }
+}
+
+### -4. 공통 region 코드
+variable "region_code" {
+  description = "Project Region ID"
+  type = String
+  default = "ap-northeast-1"
 }
 

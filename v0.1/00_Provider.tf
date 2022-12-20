@@ -1,6 +1,7 @@
 provider "aws" {
-  access_key = "<AWS_ACCESS_KEY>"
-  secret_key = "<AWS_SECRET_KEY>"
-  region = "<AWS Region>"
-  token = "<AWS_Session_token>"
+  access_key = "<AWS_Access_Key>"
+  secret_key = "<AWS_Sceret_Key>"
+  region = var.region_code
+#  token = "<AWS_Session_token>"
 }
+
