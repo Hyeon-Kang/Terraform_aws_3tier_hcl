@@ -12,3 +12,14 @@ terraform workspace new stage
 terraform workspace dev ## dev 워크스페이스로 전환
 terraform workspace prod ## prod 워크스페이스로 전환
 
+## 워크스페이스 구분에 따른 환경 명
+### "99_Variable.tf > -.2 공통 환경 코드" 는 workspace 환경 값에 따라 리소스 환경 명칭을 정의할 때 사용합니다.
+예를 들어, 현재 workspace가 "dev" 인 경우, "var.env_code[terraform.workspace]" 구문을 통해 아래
+variable에서 "development" 값을 호출합니다.
+variable "env_code" {
+  description = "Each enviroment value by workspace"
+  default = {
+    dev = "development"
+    prod = "production"
+  }
+}

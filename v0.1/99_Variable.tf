@@ -8,7 +8,7 @@ variable "project_name" {
   default = "terraform-test"
 }
 
-### -.2 공통 환경 코드
+## -.2 공통 환경 코드
 variable "env_code" {
   description = "Each enviroment value by workspace"
   default = {
@@ -17,7 +17,7 @@ variable "env_code" {
   }
 }
 
-### -3. 공통 cidr
+## -3. 공통 cidr
 variable "vpc_cidr" {
   description = "Each vpc_cidr by workspace"
   default = {
@@ -26,10 +26,22 @@ variable "vpc_cidr" {
   }
 }
 
-### -4. 공통 region 코드
+## -4. 공통 region 코드
 variable "region_code" {
   description = "Project Region ID"
-  type = String
+  type = string
   default = "ap-northeast-1"
 }
 
+## -5. 공통 AZ 코드
+variable "az_code" {
+  description = "Project AZ List"
+  type = list
+  default = ["a", "c"]
+}
+
+## -6. 공통 NAT Gateway 개수 (AZ 수를 초과할 수 없음)
+variable "nat_amount" {
+  description = "Project NAT Gateway amount"
+  default = 1
+}
